@@ -17,7 +17,7 @@ push "dap"
  
 We should use some exploit to run our *ActiveX*. I used vulnerability in emsmtp.dll. Make sure that version of the library you have is 6.0.1. So we just rewrite a return address or (in my case I rewrote *SEH* register because it was easier for me).
  
-But for me it didn't work first. The main problem was that the address of the memory where we are supposed to jump was wrong. So I needed to use [mona](https://github.com/corelan/mona) - an extension for imunity debugger. There're some useful command:
+But for me it didn't work first. The main problem was that the address of the memory where we are supposed to jump was wrong. So I needed to use [mona](https://github.com/corelan/mona) - an extension for Immunity Debugger. There're some useful command:
  - !mona pc 14356
  - !mona findmsp
  - !mona find -s "123"
