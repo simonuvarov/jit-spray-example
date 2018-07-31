@@ -1,14 +1,14 @@
-#jit-spray-example
+# jit-spray-example
 Simple JIT-spray example. I used the article written *"Writing JIT shellcode for fun and profit"* by Alexey Sintsov. It has complete description and you can repeat it step by step. 
 
-###Enviroment
+### Enviroment
  - Windows XP SP3
  - IE 8.0
  - Adobe FlashPlayer ActiveX 9
  - SWFTools to compile ActiveScript code.
  - emsmtp.dll 6.0.1 in the Quiksoft EasyMail SMTP Object
 
-###Description
+### Description
 First of all we should find address of the function we are going to call later. In my case it's *system()*. To find it we look at pep and get address of loaded dll with this function, then we looking for *system()* and get her address. After that we can push vars (name of the function to be called actually). In my example it's 'notepad' but you should take in cosidiration that in stack it will be:
 ```
 push "eton"
